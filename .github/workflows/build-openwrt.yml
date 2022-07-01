@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/baiywt/openwrt
+  REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
@@ -37,12 +37,10 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     timeout-minutes: 1200
-    
+
     steps:
     - name: Checkout
-    timeout-minutes: 1200
-        uses: actions/checkout@main
-        
+      uses: actions/checkout@main
 
     - name: Initialization environment
       env:
